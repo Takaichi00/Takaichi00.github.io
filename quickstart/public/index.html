@@ -5,16 +5,26 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+  <!--out side描画エリア-->
 <div id="remote-media"></div>
+
 <div id="controls">
   <div id="preview">
-    <p class="instructions">Hello Beautiful</p>
+    <p class="instructions" class="">仮面飲酒会</p>
+
+    <!--in side描画エリア-->
     <div id="local-media"></div>
-    <button id="button-preview">Preview My Camera</button>
+
   </div>
   <div id="room-controls">
     <p class="instructions">Room Name:</p>
     <input id="room-name" type="text" placeholder="Enter a room name" />
+
+    <!--どちらを画面最大化するかを選択-->
+    <input type="radio" name="selectScreen" value="out" checked>out side(iPad)
+    <input type="radio" name="selectScreen" value="in">in(iPhone)
+
     <button id="button-join">Join Room</button>
     <button id="button-leave">Leave Room</button>
   </div>
