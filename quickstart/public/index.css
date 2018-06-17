@@ -136,8 +136,10 @@ div#controls div#room-controls input {
 }
 
 div#controls div#room-controls button {
+  /*
   color: #fff;
   border: 1px solid #686865;
+  */
 }
 
 div#controls div#room-controls button#button-leave {
