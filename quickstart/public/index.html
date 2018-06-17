@@ -19,14 +19,18 @@
   </div>
   <div id="room-controls">
     <p class="instructions"></p>
+    <!--デモ用のルームを定義-->
+    <div id="roomSelect">
+      <button id="roomA" class="square_btn">Aさんはこちら</button>
+      <button id="roomB" class="square_btn">Bさんはこちら</button>
+    </div>
+
     <input id="room-name" type="text" placeholder="Enter a room name" value="hoge"/>
 
-    <!--デモ用のルームを定義-->
-    <button id="roomA">Aさんはこちら</button>
-    <button id="roomB">Bさんはこちら</button>
-
-    <button id="button-join">Join Room</button>
-    <button id="button-leave">Leave Room</button>
+    <div id="inRoom">
+      <button id="button-join">Join Room</button>
+      <button id="button-leave">Leave Room</button>
+    </div>
 
   </div>
   <div id="log"></div>

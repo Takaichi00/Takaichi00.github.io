@@ -10,16 +10,39 @@ body {
   background: #eeeeee;
 }
 
-div#remote-media {
-}
-
 div#remote-media video{
   height:100vh;
   width:100%;
 }
 
+#roomSelect {
+  margin:0 0 15px;
+}
+
+#inRoom {
+  margin:0 0 15px;
+}
+
 div#local-media video{
   display:none;
+}
+
+.square_btn{
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFF;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.73);
+  padding: 0.3em 0.5em;
+  background: #00bcd4;
+  border-top: solid 3px #00a3d4;
+  border-bottom: solid 3px #00a3d4;
+  transition: .4s;
+}
+
+.square_btn:hover {
+  text-shadow: -6px 0px 15px rgba(255, 255, 240, 0.83), 6px 0px 15px rgba(255, 255, 240, 0.83);
 }
 
 div#remote-media video {
