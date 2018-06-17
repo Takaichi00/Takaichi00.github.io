@@ -5,8 +5,15 @@
   <title>Twilio Video - Video Quickstart</title>
   <link rel="stylesheet" href="index.css">
 </head>
-<body>
+<body data-has-effect="true">
 
+<script src="/quickstart/lib/dat.gui.min.js"></script>
+<script src="/quickstart/lib/utils.js"></script>
+<script src="/quickstart/lib/clmtrackr.js"></script>
+<script src="/quickstart/lib/webgl-utils.js"></script>
+<script src="/quickstart/models/model_pca_20_svm.js"></script>
+<script src="/quickstart/lib/Stats.js"></script>
+<script src="/quickstart/face_deformer.js"></script>
   <!--out side描画エリア-->
 <div id="remote-media"></div>
 
@@ -35,6 +42,21 @@
   </div>
   <div id="log"></div>
   <a href="./index_noAddition.html">iPhoneの方はこちら</a>
+  <input class="btn" id="videobutton" type="button" value="video起動">
+  <input class="btn" id="startbutton" type="button" value="wait, loading video" disabled="disabled">
+  <select id="selectmask" name="mask">
+    <option value="0">Average face</option>
+    <option value="1">Mona Lisa</option>
+    <option value="2">Ironman</option>
+    <option value="3">Skull mask</option>
+    <option value="4">Sean Connery</option>
+    <option value="5">Audrey</option>
+    <option value="6">Cage</option>
+    <option value="7">Go</option>
+    <option value="8">Honda</option>
+    <option value="9">Kagawa</option>
+  </select>
+  <div class="img-box" style="visibility:hidden; height:0; overflow:hidden"><img class="masks" id="average" src="/quickstart/img/media/average.png"><img class="masks" id="monalisa" src="/quickstart/img/media/joconde.jpg"><img class="masks" id="ironman" src="/quickstart/img/media/ironman.jpg"><img class="masks" id="sean" src="/quickstart/img/media/SeanConnery.jpg"><img class="masks" id="skull" src="/quickstart/img/media/skullmask.jpg"><img class="masks" id="audrey" src="/quickstart/img/media/audrey.jpg"><img class="masks" id="cage2" src="/quickstart/img/media/cage.jpg"><img class="masks" id="go" src="/quickstart/img/media/go.jpg"><img class="masks" id="honda" src="/quickstart/img/media/honda.jpg"><img class="masks" id="kagawa" src="/quickstart/img/media/kagawa.jpg"></div>
 </div>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
