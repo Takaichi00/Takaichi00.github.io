@@ -1,5 +1,6 @@
 'use strict';
 
+var faceMask = require('./faceMask');
 var Video = require('twilio-video');
 
 var activeRoom;
@@ -107,6 +108,19 @@ function roomJoined(room) {
     log(participant.identity + " added track: " + track.kind);
     var previewContainer = document.getElementById('remote-media');
     attachTracks([track], previewContainer);
+
+    if(document.body.dataset.hasEffect = "true") {
+        const video = document.querySelector('#remote-media video');
+        if(video) {
+            const webgl = document.createElement('canvas');
+            webgl.id = 'webgl';
+            previewContainer.appendChild(webgl);
+            const overlay = document.createElement('canvas');
+            overlay.id = 'overlay';
+            previewContainer.appendChild(overlay);
+            faceMask.mask(video);
+        }
+    }
   });
 
   // When a Participant removes a Track, detach it from the DOM.
