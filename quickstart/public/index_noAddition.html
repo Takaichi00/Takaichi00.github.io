@@ -7,6 +7,12 @@
 </head>
 <body>
 
+
+<style>
+  div#remote-media video{
+    transform: scale(-1, 1);
+  }
+</style>
   <!--out side描画エリア-->
 <div id="remote-media"></div>
 
@@ -20,11 +26,6 @@
   <div id="room-controls">
     <p class="instructions"></p>
     <input id="room-name" type="text" placeholder="Enter a room name" value="hoge"/>
-
-    <!--どちらを画面最大化するかを選択-->
-    <input type="radio" name="selectScreen" value="out" checked>out side(iPhone -> iPad)
-    <input type="radio" name="selectScreen" value="in">in(iPad -> iPhone)
-
     <button id="button-join">Join Room</button>
     <button id="button-leave">Leave Room</button>
   </div>
