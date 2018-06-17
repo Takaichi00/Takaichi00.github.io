@@ -11,8 +11,8 @@ body {
 }
 
 div#remote-media video{
-  height:100vh;
-  width:100%;
+  /*height:100vh;*/
+  /*width:100%;*/
 }
 
 #roomSelect {
@@ -193,4 +193,18 @@ div#controls div#log p {
   width: 90%;
   */
   display:none;
+}
+
+#webgl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
