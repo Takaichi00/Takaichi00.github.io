@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Twilio Video - Video Quickstart</title>
   <link rel="stylesheet" href="index.css">
 </head>
@@ -9,21 +10,20 @@
   <!--out side描画エリア-->
 <div id="remote-media"></div>
 
+<!--in side描画エリア-->
+<div id="local-media"></div>
+
 <div id="controls">
   <div id="preview">
-    <p class="instructions" class="">仮面飲酒会</p>
-
-    <!--in side描画エリア-->
-    <div id="local-media"></div>
-
+    <p class="instructions" class="hidden">仮面飲酒会</p>
   </div>
   <div id="room-controls">
-    <p class="instructions">Room Name:</p>
-    <input id="room-name" type="text" placeholder="Enter a room name" />
+    <p class="instructions"></p>
+    <input id="room-name" type="text" placeholder="Enter a room name" value="hoge"/>
 
     <!--どちらを画面最大化するかを選択-->
-    <input type="radio" name="selectScreen" value="out" checked>out side(iPad)
-    <input type="radio" name="selectScreen" value="in">in(iPhone)
+    <input type="radio" name="selectScreen" value="out" checked>out side(iPhone -> iPad)
+    <input type="radio" name="selectScreen" value="in">in(iPad -> iPhone)
 
     <button id="button-join">Join Room</button>
     <button id="button-leave">Leave Room</button>
