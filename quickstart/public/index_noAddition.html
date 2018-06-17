@@ -20,6 +20,11 @@
   <div id="room-controls">
     <p class="instructions"></p>
     <input id="room-name" type="text" placeholder="Enter a room name" value="hoge"/>
+
+    <!--デモ用のルームを定義-->
+    <button id="roomA">Aさんはこちら</button>
+    <button id="roomB">Bさんはこちら</button>
+
     <button id="button-join">Join Room</button>
     <button id="button-leave">Leave Room</button>
   </div>
@@ -32,21 +37,6 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="index.js"></script>
-<script>
-  $(function(){
-
-    $("#inverted").click(function(){
-      console.log($("#remote-media video").css("transform"));
-      if($("#remote-media video").css("transform") == "matrix(-1, 0, 0, 1, 0, 0)") {
-        $("#remote-media video").css("transform","scale(1,1)");
-      }
-      else {
-        $("#remote-media video").css("transform","scale(-1,1)");
-      }
-      console.log("inverted!");
-    });
-    
-  });
-</script>
+<script src="./common.js"></script>
 </body>
 </html>
